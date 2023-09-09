@@ -15,8 +15,11 @@ return new class extends Migration
             $table->id();
             $table->bigInteger('user_id')->unsigned()->index();
             $table->string('name', 100)->index();
-            $table->string('type', 100)->nullable();
+            $table->smallInteger('type');
             $table->string('detail', 500)->nullable();
+            $table->integer('price');
+            $table->string('variety',100)->nullable();
+            $table->string('produce',100)->nullable();
             $table->timestamps();
         });
     }

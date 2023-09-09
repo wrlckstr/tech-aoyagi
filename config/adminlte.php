@@ -292,8 +292,14 @@ return [
     'menu' => [
         [
             'text' => '商品一覧',
-            'url'  => 'items',
+            'url'  => '/items/index',
+            'icon' => 'fas fa-gamepad'
+        ],
+        [
+            'text' => 'ユーザー一覧(管理者専用)',
+            'url'  => '/user/index',
             'icon' => 'fas fa-gamepad',
+            'can' => 'admin'
         ],
 
         // AdminLTEデフォルト

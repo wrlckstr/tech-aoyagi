@@ -16,6 +16,9 @@ class Item extends Model
         'name',
         'type',
         'detail',
+        'variety',
+        'price',
+        'produce'
     ];
 
     /**

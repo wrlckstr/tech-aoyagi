@@ -53,6 +53,16 @@ class RegisterController extends Controller
             'name' => ['required', 'string', 'max:255'],
             'email' => ['required', 'string', 'email', 'max:255', 'unique:users'],
             'password' => ['required', 'string', 'min:8', 'confirmed'],
+        ],[
+            'name.required'=>'名前は必須です',
+            'name.max'=>'名前は最大255文字です',
+            'email.required'=>'メールアドレスは必須です',
+            'email.email'=>'メールアドレスを入力してください',
+            'email.max'=>'メールアドレスは最大255文字です',
+            'email.unique'=>'このメールアドレスは既に使用されています',
+            'password.required'=>'パスワードは必須です',
+            'password.min'=>'パスワードは8文字以上入力してください',
+            'password.confirmed'=> 'パスワードが異なります',
         ]);
     }
 
@@ -68,6 +78,7 @@ class RegisterController extends Controller
             'name' => $data['name'],
             'email' => $data['email'],
             'password' => Hash::make($data['password']),
+            'role'=>'10',
         ]);
     }
 }
