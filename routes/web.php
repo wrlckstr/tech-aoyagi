@@ -36,7 +36,7 @@ Route::group(['middleware'=>['auth','can:admin']],function(){
 
 
 Route::get('/items/index', [App\Http\Controllers\ItemController::class, 'index'])->name('item.index');
-Route::get('/items/detail/{id}',[App\Http\Controllers\ItemController::class,'detail']);
+Route::get('/items/detail/{id}/{user_id}/{last_updated_user_id}',[App\Http\Controllers\ItemController::class,'detail']);
     
 // 編集者のみ
 Route::group(['middleware'=>['auth','can:editor']],function(){

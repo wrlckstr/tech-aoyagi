@@ -296,7 +296,7 @@ return [
             'icon' => 'fas fa-gamepad'
         ],
         [
-            'text' => 'ユーザー一覧(管理者専用)',
+            'text' => 'ユーザー一覧',
             'url'  => '/user/index',
             'icon' => 'fas fa-gamepad',
             'can' => 'admin'

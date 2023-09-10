@@ -18,7 +18,8 @@ class Item extends Model
         'detail',
         'variety',
         'price',
-        'produce'
+        'produce',
+        'last_updated_user_id'
     ];
 
     /**

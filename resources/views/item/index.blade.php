@@ -13,11 +13,13 @@
                 <div class="card-header">
                     <h3 class="card-title">商品一覧</h3>
                     <div class="card-tools">
+                    @can ('editor')
                         <div class="input-group input-group-sm">
                             <div class="input-group-append">
                                 <a href="{{ url('items/add') }}" class="btn btn-default">商品登録</a>
                             </div>
                         </div>
+                    @endcan
                     </div>
                 </div>
                 <div class="card">
@@ -79,7 +81,7 @@
                                     </td>
                                     <td>
                                        <div>
-                                            <a href="/items/detail/{{$item -> id}}" class="text-decoration-none text-black">
+                                            <a href="/items/detail/{{$item -> id}}/{{$item -> user_id}}/{{$item -> last_updated_user_id}}" class="text-decoration-none text-black">
                                                 <button type="submit" class="btn btn-outline-dark">
                                                     詳細
                                                 </button>

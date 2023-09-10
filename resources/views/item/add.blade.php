@@ -25,12 +25,12 @@
                     <div class="card-body">
                         <div class="form-group">
                             <label for="name">商品名</label>
-                            <input type="text" class="form-control" id="name" name="name" placeholder="商品名">
+                            <input type="text" class="form-control" id="name" name="name" value="{{old('name')}}" placeholder="商品名">
                         </div>
 
                         <div class="form-group">
                             <label for="produce">産地</label>
-                            <input type="text" class="form-control" id="produce" name="produce" placeholder="産地">
+                            <input type="text" class="form-control" id="produce" name="produce" value="{{old('produce')}}" placeholder="産地">
                         </div>
 
                         <div class="form-group">
@@ -45,18 +45,18 @@
                         </div>
 
                         <div class="form-group">
-                            <label for="vriety">品種</label>
-                            <input type="text" class="form-control" id="variety" name="variety" placeholder="品種">
+                            <label for="variety">品種</label>
+                            <input type="text" class="form-control" id="variety" name="variety" value="{{old('variety')}}" placeholder="品種">
                         </div>
 
                         <div class="form-group">
                             <label for="price">価格</label>
-                            <input type="text" class="form-control" id="price" name="price" placeholder="価格">
+                            <input type="text" class="form-control" id="price" name="price" value="{{old('price')}}" placeholder="価格">
                         </div>
 
                         <div class="form-group">
                             <label for="detail">詳細</label>
-                            <input type="text" class="form-control" id="detail" name="detail" placeholder="詳細説明">
+                            <input type="text" class="form-control" id="detail" name="detail"  value="{{old('detail')}}" placeholder="詳細説明">
                         </div>
                     </div>
 

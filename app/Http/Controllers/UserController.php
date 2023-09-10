@@ -45,12 +45,13 @@ class UserController extends Controller
      public function edit_koushin(Request $request){
          $this -> validate($request, [
             'name' =>'required| max:50',
-            'email' =>'required| max:100'
+            'email' =>'required| max:100|email'
          ],[
             'name.required'=>'担当者名は必須です',
             'name.max'=>'担当者名は50文字以下にしてください',
             'email.required'=>'メールアドレスは必須です',
             'email.max'=>'メールアドレスは100文字以内にしてください',
+            'email.email' => '有効なメールアドレスではありません'
          ]);
 
          $members_edit= User::find($request->id);

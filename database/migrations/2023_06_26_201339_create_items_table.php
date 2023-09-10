@@ -20,6 +20,7 @@ return new class extends Migration
             $table->integer('price');
             $table->string('variety',100)->nullable();
             $table->string('produce',100)->nullable();
+            $table->integer('last_updated_user_id') ->nullable();
             $table->timestamps();
         });
     }
