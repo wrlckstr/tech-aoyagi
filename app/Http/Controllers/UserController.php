@@ -31,7 +31,7 @@ class UserController extends Controller
 
       $members1 = $query->paginate(10);
 
-      return view('user.index', ['info' => $members1, 'search' => $search]);
+      return view('/user/index', ['info' => $members1, 'search' => $search]);
      }
 
 
