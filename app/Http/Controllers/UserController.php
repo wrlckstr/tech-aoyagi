@@ -24,9 +24,7 @@ class UserController extends Controller
 
       // キーワードが入力されている場合は検索条件を追加
       if ($search) {
-          $query->where('name', 'LIKE', "%{$search}%")
-               ->orWhere('role', 'LIKE', "%{$search}%")
-               ->orWhere('email', 'LIKE', "%{$search}%");
+          $query->where('name', 'LIKE', "%{$search}%");
       }
 
       $members1 = $query->paginate(10);

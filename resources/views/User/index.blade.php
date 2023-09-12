@@ -16,7 +16,7 @@
 <body>
     <form class="form-inline" action="{{ route('user.index') }}" method="GET">
         <div class="form-group">
-            <label for="search">名前　権限　メールアドレスから検索！</label>
+            <label for="search">名前で検索！</label>
             <input type="search" id="search" class="form-control  mr-3" name="search" value="{{ $search }}" placeholder="ここに入力" aria-label="検索...">
         </div>
         <input type="submit" value="検索" class="btn btn-info">
