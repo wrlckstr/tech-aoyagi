@@ -24,21 +24,19 @@ class UserController extends Controller
 
       // キーワードが入力されている場合は検索条件を追加
       if ($search) {
-          $query->where('name', 'LIKE', "%{$search}%")
-               ->orWhere('role', 'LIKE', "%{$search}%")
-               ->orWhere('email', 'LIKE', "%{$search}%");
+          $query->where('name', 'LIKE', "%{$search}%");
       }
 
       $members1 = $query->paginate(10);
 
-      return view('user.index', ['info' => $members1, 'search' => $search]);
+      return view('/User/index', ['info' => $members1, 'search' => $search]);
      }
 
 
    //   編集画面への遷移
      public function edit  (Request $request){
       $members = User::find($request->id);
-      return view('user.edit',['members_edit'=>$members]);
+      return view('User.edit',['members_edit'=>$members]);
      }
 
    //   編集画面の編集ボタン

@@ -89,9 +89,13 @@
                                         </div> 
                                     </td>
                                 </tr>
+
                             @endforeach
                         </tbody>
                     </table>
+                                                        <!-- ページネーション -->
+
+                                                        {{$item_info-> links() }}
                 </div>
             </div>
         </div>

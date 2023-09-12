@@ -35,7 +35,6 @@ class ItemController extends Controller
       if ($search) {
           $query->where('name', 'LIKE', "%{$search}%")
                ->orWhere('produce', 'LIKE', "%{$search}%")
-               ->orWhere('type', 'LIKE', "%{$search}%")
                ->orWhere('price', 'LIKE', "%{$search}%")
                ->orWhere('variety', 'LIKE', "%{$search}%");
       }
@@ -152,26 +151,3 @@ class ItemController extends Controller
         return view('/item/detail',['item_detail'=>$detail_controller,'detail_user'=> $detail_user,'detail_user_update'=>$detail_user_update]);
     }
 }
-// $this -> validate($request, [
-//     'name' =>'required| max:50',
-//     'email' =>'required| max:100'
-//  ],[
-//     'name.required'=>'担当者名は必須です',
-//     'name.max'=>'担当者名は50文字以下にしてください',
-//     'email.required'=>'メールアドレスは必須です',
-//     'email.max'=>'メールアドレスは100文字以内にしてください',
-//  ]);
-
-// $this -> validate($request, [
-//     'name' =>'required| max:100',
-//     'produce'=>'max:100',
-//     'type' =>'required',
-//     'variety'=>'max:100',
-//     'price' => 'required',
-//     'detail' => 'max:500'
-// ],[
-//     'name.required'=>'担当者名は必須です',
-//     'name.max'=>'担当者名は50文字以下にしてください',
-//     'email.required'=>'メールアドレスは必須です',
-//     'email.max'=>'メールアドレスは100文字以内にしてください'
-// ]);
