@@ -41,7 +41,7 @@
         <div class="form-group ">
             <label for="item_edit_type" class="control-label">種別</label>
                 <select name="type" id="item_edit_type" class="form-select  ">
-                    <option value="{{ old('type', $item_edit ->type)}}" selected hidden class=""> 
+                    <option value="{{$item_edit ->type}}" selected hidden class=""> 
                         現在は
                         @switch($item_edit -> type)
                             @case (1) 果物
