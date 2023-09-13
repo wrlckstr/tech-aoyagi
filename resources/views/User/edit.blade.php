@@ -28,7 +28,7 @@
         <div class="form-group">
             <label for="members_edit_role" class="control-label">権限</label>
                 <select name="role" id="members_edit_role" class="form-select ">
-                    <option value="{{ old('role', $members_edit ->role)}}" selected hidden class=""> 
+                    <option value="{{$members_edit ->role}}" selected hidden class=""> 
                         現在は
                         @switch($members_edit ->role)
                         @case(10) 閲覧者
