@@ -42,13 +42,13 @@ class UserController extends Controller
    //   編集画面の編集ボタン
      public function edit_koushin(Request $request){
          $this -> validate($request, [
-            'name' =>'required| max:50',
-            'email' =>'required| max:100|email'
+            'name' =>'required| max:255',
+            'email' =>'required| max:255|email'
          ],[
             'name.required'=>'担当者名は必須です',
-            'name.max'=>'担当者名は50文字以下にしてください',
+            'name.max'=>'担当者名は255文字以下にしてください',
             'email.required'=>'メールアドレスは必須です',
-            'email.max'=>'メールアドレスは100文字以内にしてください',
+            'email.max'=>'メールアドレスは255文字以内にしてください',
             'email.email' => '有効なメールアドレスではありません'
          ]);
 

@@ -1,43 +1,38 @@
-## 商品管理システム
+# 青果店商品管理システム
+## 概要　アプリケーションの概要
+青果物販売を手掛けるA社のホームページでは、A社商品を紹介している。
+商品の更新作業が頻繁に行われるようになったが、ホームページを直接修正するのは時間がかかる。
+そこで、簡単に商品の更新作業をしたいとの要望が出てきた。
+本システムは、ホームページで紹介する商品をWebシステムで管理し、作業の効率化を図る。
+追加機能の実装では、ユーザー一覧や編集機能に加え、産地や品種など青果特有の項目を追加した。
+商品詳細ページでは、登録者や更新者を記録する機能、検索機能を実装した。
+さらに、ユーザーの権限を3種類に分け、管理者（ユーザー一覧を含むすべての閲覧- 編集権限）編集者（商品関連の編集権限）閲覧者（商品一覧- 詳細の閲覧権限）を実装しました。
+## 主な機能
+- ユーザー登録、ログイン機能
+- 権限によるアクセス制御
+- ユーザー一覧機能
+- ユーザー名検索機能
+- ユーザー情報、権限編集機能
+- 商品登録機能
+- 商品一覧機能
+- 商品検索機能
+- 商品詳細閲覧機能
+- 商品編集機能
+## 開発環境
+PHP 8.2.0
+mysql 10.4.27-MariaDB
+Laravel Framework 10.13.5
+## 設計書
+[設計書ページ]https://drive.google.com/drive/folders/1UZrL-1g6pYM5rj1_SleBTGOlvCH6mtJN?usp=sharing
+## システム閲覧
+[アプリケーションページ(本番環境)]
+https://techis-aoyagi-production-4fe192976943.herokuapp.com/login
+### テストアカウント情報
+権限は3種類あり、管理者、編集者、閲覧者です。
 
-### 環境構築手順
+- 管理者権限アカウント：admin@tech.com
+- 編集者権限アカウント：tech1@tech.com
+- 閲覧者権限アカウント：tech2@tech.com
+- 共通パスワード：ssnn1007
 
-* Gitクローン
-* .env.example をコピーして .env を作成
-* MySQLのデータベース作成（名前：item_management）
-* Macの場合 .env の DB_PASSWORD を root に修正（Windowsは修正不要）
-
-    ```INI
-    DB_PASSWORD=root
-    ```
-
-* APP_KEY生成
-
-    ```console
-    php artisan key:generate
-    ```
-
-* Composerインストール
-
-    ```console
-    composer install
-    ```
-
-* フロント環境構築
-
-    ```console
-    npm ci
-    npm run build
-    ```
-
-* マイグレーション
-
-    ```console
-    php artisan migrate
-    ```
-
-* 起動
-
-    ```console
-    php artisan serve
-    ```
+アカウントを新規登録すると閲覧者権限になります。
